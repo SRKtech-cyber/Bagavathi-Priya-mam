@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0; /* Light grey background */
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.header {
+    background: #ffeb3b; /* Bright yellow */
+    padding: 30px;
+    text-align: center;
+    color: #333;
+    border-bottom: 5px solid #ffc107; /* Darker yellow border */
+    animation: headerAnimation 2s ease-in-out;
+}
+
+@keyframes headerAnimation {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.intro, .highlights, .interactive {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.highlights-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.highlight {
+    padding: 15px;
+    background: #e3f2fd; /* Light blue */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: popIn 1s ease-in-out;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.interactive {
+    background: #fce4ec; /* Light pink */
+}
+
+.question {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+button {
+    display: block;
+    margin: 10px 0;
+    padding: 15px;
+    background: #2196F3; /* Bright blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1em;
+}
+
+button:hover {
+    background: #1976D2; /* Darker blue */
+    transform: scale(1.05);
+}
+
+button:active {
+    background: #1565C0; /* Even darker blue */
+    transform: scale(0.95);
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #ffeb3b; /* Bright yellow */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid #ffc107; /* Darker yellow border */
+}
+
+/* Video Animation */
+.poem-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.poem-video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: scaleIn 1s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.poem-video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
